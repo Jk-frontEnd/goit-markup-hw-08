@@ -1,19 +1,16 @@
 .work-section {
-    padding-bottom: 94px;
-
-    //mobile
-    @media screen and (min-width: 480px) {
-        display: none;
-    }
+    display: none;
+    
 
     //tablet
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
         display: none;
     }
     
     //desktop
     @media screen and (min-width: 1200px) {
-        display:contents;
+        padding-bottom: 94px;
+        display: contents;
     }
 
     &__title {

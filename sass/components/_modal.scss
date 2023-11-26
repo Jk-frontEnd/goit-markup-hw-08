@@ -36,14 +36,18 @@
         transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
-            @media screen and (min-width: 1200px) {
-                left: 490px;
-            }
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            left: 490px;
+        }
 
-            &:hover,
-            &:focus {
-                fill: var(--color-web);
-            }
+        @media screen and (min-width: 1200px) {
+            left: 490px;
+        }
+
+        &:hover,
+        &:focus {
+            fill: var(--color-web);
+        }
     }
 
 
@@ -126,12 +130,7 @@
             }
     }
 
-    &__name {
-        display: flex;
-        justify-content: left;
-        text-align: left;
-        margin-bottom: 4px;
-    }
+    
 
     &__submit-btn {
         font-size: 16px;
@@ -260,6 +259,23 @@
         &:active svg {
             fill: var(--color-web);
         }
+    }
+}
+
+.modal .modal__name {
+    display: flex;
+    justify-content: left;
+    margin-bottom: 4px;
+    position: relative;
+
+    left: 18px;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        left: 0;
+    }
+
+    @media screen and (min-width: 1200px) {
+        left: 0;
     }
 }
 
