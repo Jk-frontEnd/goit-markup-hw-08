@@ -4,36 +4,55 @@
             rgba(47, 48, 58, 0.40)),
         url(../images/home/solution-bg.jpg);
     background-color: var(--color-add-background);
-    padding-top: 200px;
-    padding-bottom: 200px;
-    max-width: 1600px;
+    background-position: center;
+    padding-top: 118px;
+    padding-bottom: 118px;
     display: flex;
+    justify-content: center;
     margin: auto;
 
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
+        padding-top: 200px;
+        padding-bottom: 200px;
+    }
+    
+    @media screen and (min-width: 1200px) {
+        padding-top: 200px;
+        padding-bottom: 200px;  
+        max-width: 1600px;
+    }
+
+
     &__title {
-            color: var(--color-additional);
-            font-style: normal;
-            font-weight: 900;
+        color: var(--color-additional);
+        font-style: normal;
+        font-weight: 900;
+        font-size: 26px;
+        font-weight: 900;
+        line-height: 1.6;
+        text-transform: uppercase;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 30px;
+        
+        @media screen and (min-width: 1200px) {}
             font-size: 44px;
             line-height: 1.36;
             max-width: 696px;
-            text-transform: uppercase;
-            text-align: center;
-            margin: auto;
-            margin-bottom: 30px;
-        }
+    }
 
     &__btn {
+        font-size: 16px;
         font-style: normal;
         font-weight: 700;
-        font-size: 16px;
-        line-height: 1.19;
+        line-height: 1.9;
+        letter-spacing: 0.96px;
         color: var(--color-additional);
         background-color: var(--color-web);
         box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
         border-radius: 4px;
         border: none;
-        padding: 10px 32px 10px 32px;
+        padding: 10px 24px;
         cursor: pointer;
         display: flex;
         justify-content: center;

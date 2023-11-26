@@ -3,22 +3,28 @@
     padding-bottom: 94px;
     padding-left: 0;
 
-&__title {
+    &__title {
         text-align: center;
         font-size: 36px;
         font-weight: 700;
         line-height: normal;
-        margin-bottom: 50px;
+        margin-bottom: 30px;
         margin-top: 0;
-    }
+        
+        @media screen and (min-width: 1200px) {
+            margin-bottom: 50px;
+        }
+        }
 
     &__list {
         display: flex;
         list-style: none;
+        flex-wrap: wrap;
         margin: 0 auto;
         gap: 30px;
         align-items: center;
-    }
+        justify-content: center;
+        }
 
     &__icon {
         fill: var(--color-icon);
@@ -29,7 +35,7 @@
 
 
     &__list-link {
-        width: 170px;
+        width: 210px;
         height: 92px;
         display: flex;
         align-items: center;
@@ -48,5 +54,13 @@
                 fill: var(--color-web);
                 border-color: var(--color-web);
             }
-    }
+    
+        @media screen and (min-width: 768px) and (max-width: 1200px) {
+            width: 226px;
+        }
+
+        @media screen and (min-width: 1200px) {
+            width: 170px;
+        }
+        }
 }

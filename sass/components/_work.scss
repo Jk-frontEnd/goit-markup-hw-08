@@ -1,6 +1,21 @@
 .work-section {
     padding-bottom: 94px;
 
+    //mobile
+    @media screen and (min-width: 480px) {
+        display: none;
+    }
+
+    //tablet
+    @media screen and (min-width: 768px) {
+        display: none;
+    }
+    
+    //desktop
+    @media screen and (min-width: 1200px) {
+        display:contents;
+    }
+
     &__title {
         font-style: normal;
         font-weight: 700;

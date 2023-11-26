@@ -5,44 +5,95 @@
 
     &__list {
         list-style: none;
-        display: inline-flex;
-        align-items: first baseline;
-        gap: 30px;
-    }
+        flex-direction: column;
+        justify-content: center;
+
+        
+        // Styles for tablet screens (min-width: 768px)
+        @media screen and (min-width: 768px) and (max-width: 1200px) {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 30px;
+            align-items: first baseline;
+        }
+    
+        // Styles for desktop screens (min-width: 1200px)
+        @media screen and (min-width: 1200px) {
+            display: flex;
+            align-items: first baseline;
+            gap: 30px;
+            flex-direction: row;
+        }
+}
 
     &__list-item {
-        width: 270px;
         display: flex;
         flex-direction: column;
         align-items: first baseline;
         justify-content: center;
+        width: 450px;
+
+        
+        //tablet
+        @media screen and (min-width: 768px) {
+            width: 354px;
+        }
+    
+        //desktop
+        @media screen and (min-width: 1200px) {
+            width: 270px;
+        }
     }
 
     &__block {
-        padding: 25px 100px;
         background-color: var(--color-button);
         border-radius: 4px;
         margin-bottom: 30px;
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: 25px 190px;
+
+        //tablet
+        @media screen and (min-width: 768px) {
+            padding: 25px 142px;        
+        }
+
+        //desktop
+        @media screen and (min-width: 1200px) {
+            padding: 25px 100px;        
+        }
     }
 
     &__title {
         font-style: normal;
-        font-weight: 700;
         font-size: 14px;
-        line-height: 1.14;
+        line-height: 1;
+        font-weight: 700;
         color: var(--color-main);
         margin: 0;
-        margin-bottom: 12px;
+        margin-bottom: 10px;
+        align-self: center;
+
+        @media screen and (min-width: 768px) and (max-width: 1200px) {
+            margin-bottom: 12px;
+            align-self: auto;        }
+
+        // Styles for desktop screens (min-width: 1200px)
+        @media screen and (min-width: 1200px) {
+            margin-bottom: 12px;
+            align-self: auto;
+        }
+
+
     }
 
     &__text {
         font-style: normal;
         font-weight: 400;
         font-size: 14px;
-        line-height: 24px;
+        line-height: 1.7;
         color: var(--color-desc);
         margin-top: 0;
         margin-bottom: 0;

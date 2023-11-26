@@ -8,13 +8,14 @@
     transform: scale(1);
     transition: scale 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
+
     &__fill {
-            padding: 40px;
-            color: var(--color-desc);
-            font-size: 12px;
-            font-weight: 400;
-            letter-spacing: 0.12px;
-        }
+        padding: 40px;
+        color: var(--color-desc);
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0.12px;
+    }
 
     &__close-btn {
         position: absolute;
@@ -29,11 +30,15 @@
         cursor: pointer;
         top: 8px;
         right: 8px;
-        left: 490px;
+        left: 412px;
     
         transition-property: fill;
         transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+            @media screen and (min-width: 1200px) {
+                left: 490px;
+            }
 
             &:hover,
             &:focus {
@@ -46,7 +51,7 @@
         color: var(--color-main);
         font-size: 20px;
         font-weight: 700;
-        line-height: 1;
+        line-height: 1.5;
         letter-spacing: 0.6px;
         margin-bottom: 12px;
     }
@@ -54,7 +59,7 @@
     &__input {
         border-radius: 4px;
         border: 1px solid rgba(33, 33, 33, 0.20);
-        width: 448px;
+        width: 370px;
         height: 40px;
         padding: 0;
         margin: 0;
@@ -63,6 +68,22 @@
         transition-property: border;
         transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        
+        @media screen and (min-width: 768px) and (max-width: 1200px) {
+            width: 448px;
+            height: 40px;
+            padding: 0;
+            margin: 0;
+            padding-left: 42px;
+        }
+        
+        @media screen and (min-width: 1200px) {
+            width: 448px;
+            height: 40px;
+            padding: 0;
+            margin: 0;
+            padding-left: 42px;
+        }
 
             &:hover,
             &:focus,
@@ -75,20 +96,26 @@
 
     &__comment {
         height: 120px;
-        width: 448px;
+        width: 370px;
         padding: 12px 16px;
         border-radius: 4px;
         border: 1px solid rgba(33, 33, 33, 0.20);
         resize: none;
-    
         color: var(--color-main);
         font-size: 14px;
-    
         margin: 0;
     
         transition-property: border;
         transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        @media screen and (min-width: 768px) and (max-width: 1200px) {
+            width: 448px;
+        }
+    
+        @media screen and (min-width: 1200px) {
+            width: 448px;
+        }
 
             &:hover,
             &:focus,
@@ -119,12 +146,10 @@
         border: none;
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 
-        padding: 10px 32px;
-        cursor: pointer;
+        padding: 10px 52px;
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: 10px;
         fill: var(--color-additional);
         margin: auto;
         cursor: pointer;
@@ -186,16 +211,17 @@
 
     &__agree {
         font-family: var(--font-family-main);
-        font-size: 14px;
+        font-size: 12px;
         font-style: normal;
         font-weight: 400;
-        line-height: 1.7;
+        line-height: normal;
+        letter-spacing: 0.36px;
     }
 
     &__policy-link {
         color: var(--color-web);
         font-family: var(--font-family-main);
-        font-size: 14px;
+        font-size: 12px;
         font-style: normal;
         font-weight: 400;
         line-height: 24px;
@@ -210,9 +236,8 @@
     &__label>&__img {
         fill: var(--color-main);
         position: relative;
+        left: 25px;
         top: -30px;
-        left: 12px;
-        bottom: 0;
 
         display: flex;
 
@@ -220,6 +245,15 @@
         transition-property: fill;
         transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        @media screen and (min-width: 768px) and (max-width: 1200px) {
+            left: 15px;
+        }
+        
+        @media screen and (min-width: 1200px) {
+            left: 12px;
+            bottom: 0;
+        }
 
         &:hover svg,
         &:focus svg,
