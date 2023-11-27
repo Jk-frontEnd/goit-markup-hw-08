@@ -20,7 +20,7 @@
         margin-top: 0;
         margin-bottom: 30px;
 
-        @media screen and (min-width: 768px) and (max-width: 1200px) {
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
             margin-bottom: 30px;
         }
         
@@ -32,7 +32,7 @@
     &__list {
         list-style: none;
 
-        @media screen and (min-width: 768px) and (max-width: 1200px) {
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
             display: flex;
             gap: 30px;
             flex-wrap: wrap;
@@ -125,7 +125,7 @@
 .team-section img {
     width: 450px;
 
-    @media screen and (min-width: 768px) and (max-width: 1200px) {
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
         width: 354px;
     }
     
