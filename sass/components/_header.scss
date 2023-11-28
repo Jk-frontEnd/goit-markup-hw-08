@@ -15,7 +15,6 @@ nav {
 
     &__contacts {
         display: flex;
-        justify-content: flex-end;
         gap: 30px;
         margin-left: auto;
         margin-bottom: 0;
@@ -60,7 +59,6 @@ nav {
 
     &__phone {
         fill: var(--color-icon);
-        margin-left: 12px;
         margin-right: 10px;
     }
 

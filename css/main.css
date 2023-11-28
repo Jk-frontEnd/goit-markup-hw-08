@@ -119,9 +119,6 @@ nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
   gap: 30px;
   margin-left: auto;
   margin-bottom: 0;
@@ -161,7 +158,6 @@ nav {
 }
 .page-header__phone {
   fill: var(--color-icon);
-  margin-left: 12px;
   margin-right: 10px;
 }
 .page-header__mail, .page-header__phone {
