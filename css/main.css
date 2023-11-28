@@ -1727,6 +1727,16 @@ footer {
           flex-direction: column;
   background-color: var(--color-additional);
 }
+@media screen and (min-width: 768px) and (max-width: 1200px) {
+  .mobile-menu {
+    display: none;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .mobile-menu {
+    display: none;
+  }
+}
 .mobile-menu__link {
   color: var(--color-main);
   text-decoration: none;
@@ -1751,8 +1761,13 @@ footer {
   line-height: normal;
   letter-spacing: 0.68px;
 }
-.mobile-menu .mrg {
+.mobile-menu__mrg {
   margin-bottom: 32px;
+}
+.mobile-menu__pad {
+  padding-right: 10px;
+  border-right: 1px solid rgba(33, 33, 33, 0.2);
+  margin-right: 10px;
 }
 .mobile-menu__contact-mail {
   color: var(--color-desc);
@@ -1783,18 +1798,4 @@ footer {
 
 .mobile-menu__nav li {
   margin-bottom: 32px;
-}
-
-.mobile-menu__socials li {
-  border-right: 2px solid var(--color-desc);
-  padding: 0px 10px;
-}
-
-.first {
-  margin: 0;
-  padding: 0;
-}
-
-.last {
-  border: none;
 }/*# sourceMappingURL=main.css.map */

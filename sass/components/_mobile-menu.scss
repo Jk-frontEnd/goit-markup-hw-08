@@ -11,6 +11,14 @@
 
     background-color: var(--color-additional);
 
+    @media screen and (min-width: 768px) and (max-width: 1200px) {
+        display: none;
+    }
+    
+    @media screen and (min-width: 1200px) {
+        display: none;
+    }
+
     &__link {
         color: var(--color-main);
         text-decoration: none;
@@ -38,8 +46,14 @@
         letter-spacing: 0.68px;
     }
 
-    .mrg {
+    &__mrg {
         margin-bottom: 32px;
+    }
+
+    &__pad {
+        padding-right: 10px;
+        border-right: 1px solid rgba(33, 33, 33, 0.20);
+        margin-right: 10px;
     }
 
     &__contact-mail {
@@ -73,18 +87,4 @@
 
 .mobile-menu__nav li {
     margin-bottom: 32px;
-}
-
-.mobile-menu__socials li {
-    border-right: 2px solid var(--color-desc);
-    padding: 0px 10px;
-}
-
-.first {
-    margin: 0;
-    padding: 0;
-}
-
-.last {
-    border: none;
 }
