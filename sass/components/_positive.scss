@@ -33,7 +33,7 @@
         align-items: first baseline;
         justify-content: center;
         width: 450px;
-            margin-bottom: 30px;
+        margin-bottom: 30px;
         
         //tablet
         @media screen and (min-width: 768px) {
@@ -45,8 +45,6 @@
             width: 270px;
         }
     }
-
-
 
     &__block {
         background-color: var(--color-button);

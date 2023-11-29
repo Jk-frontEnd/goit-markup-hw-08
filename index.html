@@ -31,16 +31,6 @@
             <span class="logo__studio">Studio</span>
           </a>
 
-          <button
-            class="menu-toggle js-open-menu"
-            aria-expanded="false"
-            aria-controls="mobile-menu"
-          >
-            <svg width="40" height="40">
-              <use href="./sprite.svg#menu"></use>
-            </svg>
-          </button>
-
           <ul class="page-header__nav">
             <li>
               <a class="page-header__link" href="./index.html">Студія</a>
@@ -76,10 +66,75 @@
             </a>
           </li>
         </ul>
+
+        <div class="menu" id="hamburger-icon" onclick="toggleMobileMenu(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+          <ul class="mobile-menu">
+            <ul class="mobile-menu__nav">
+              <li>
+                <a
+                  href="./index.html"
+                  class="mobile-menu__link mobile-menu__current"
+                  >Студія</a
+                >
+              </li>
+              <li>
+                <a href="./portfolio.html" class="mobile-menu__link"
+                  >Портфоліо</a
+                >
+              </li>
+              <li><a href="#" class="mobile-menu__link">Контакти</a></li>
+            </ul>
+
+            <ul class="mobile-menu__contacts">
+              <li class="mobile-menu__mrg">
+                <a href="tel:+380961111111" class="mobile-menu__contact-tel"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+              <li>
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="mobile-menu__contact-mail"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+
+            <ul class="mobile-menu__socials">
+              <li class="mobile-menu__pad">
+                <a href="instagram.com" class="mobile-menu__social-link"
+                  >Instagram</a
+                >
+              </li>
+              <li class="mobile-menu__pad">
+                <a href="twitter.com" class="mobile-menu__social-link"
+                  >Twitter</a
+                >
+              </li>
+              <li class="mobile-menu__pad">
+                <a href="facebook.com" class="mobile-menu__social-link"
+                  >Facebook</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/"
+                  class="mobile-menu__social-link"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </ul>
+        </div>
       </div>
     </header>
 
     <main>
+      <!---tuto-->
+
       <section class="solution-section">
         <div class="container">
           <h1 class="solution-section__title">
@@ -255,6 +310,7 @@
             <li class="work-section__item">
               <div class="work-section__thumb">
                 <img
+                  class="work-section__img"
                   src="./images/home/coding.jpg"
                   alt="Кодування"
                   width="370"
@@ -267,6 +323,7 @@
             <li class="work-item">
               <div class="work-section__thumb">
                 <img
+                  class="work-section__img"
                   src="./images/home/sync.jpg"
                   alt="Синхронізація"
                   width="370"
@@ -279,6 +336,7 @@
             <li class="work-item">
               <div class="work-section__thumb">
                 <img
+                  class="work-section__img"
                   src="./images/home/color.jpg"
                   alt="Кольорова схема"
                   width="370"
@@ -298,6 +356,7 @@
           <ul class="team-section__list">
             <li class="team-section__items">
               <img
+                class="team-section__img"
                 src="./images/home/igor.jpg"
                 alt="Ігор Дем'яненко"
                 width="270"
@@ -356,6 +415,7 @@
 
             <li class="team-section__items">
               <img
+                class="team-section__img"
                 src="./images/home/olga.jpg"
                 alt="Ольга Рєпіна"
                 width="270"
@@ -415,6 +475,7 @@
 
             <li class="team-section__items">
               <img
+                class="team-section__img"
                 src="./images/home/mykola.jpg"
                 alt="Микола Тарасов"
                 width="270"
@@ -473,6 +534,7 @@
 
             <li class="team-section__items">
               <img
+                class="team-section__img"
                 src="./images/home/michael.jpg"
                 alt="Михайло Єрмаков"
                 width="270"
@@ -587,6 +649,7 @@
         </div>
       </section>
     </main>
+
     <footer>
       <div class="container footer">
         <div class="main-ftr">
@@ -672,13 +735,12 @@
             </li>
           </ul>
         </div>
-
         <div class="subscribe">
           <p class="subscribe__title">Підпишіться на розсилку</p>
           <form class="subscribe__form" name="subscribe">
             <input
               name="main-ftr__email"
-              class="input-email"
+              class="subscribe__input"
               type="email"
               id="footer_email"
               placeholder="E-mail"
@@ -695,55 +757,6 @@
         </div>
       </div>
     </footer>
-
-    <div mobile-menu class="mobile-menu" id="mobile-menu">
-      <button class="menu-toggle js-close-menu">
-        <svg width="40" height="40">
-          <use href="./sprite.svg#close-menu"></use>
-        </svg>
-      </button>
-      <ul class="mobile-menu__nav">
-        <li>
-          <a href="./index.html" class="mobile-menu__link mobile-menu__current"
-            >Студія</a
-          >
-        </li>
-        <li>
-          <a href="./portfolio.html" class="mobile-menu__link">Портфоліо</a>
-        </li>
-        <li><a href="#" class="mobile-menu__link">Контакти</a></li>
-      </ul>
-
-      <ul class="mobile-menu__contacts">
-        <li class="mobile-menu__mrg">
-          <a href="tel:+380961111111" class="mobile-menu__contact-tel"
-            >+38 096 111 11 11</a
-          >
-        </li>
-        <li>
-          <a href="mailto:info@devstudio.com" class="mobile-menu__contact-mail"
-            >info@devstudio.com</a
-          >
-        </li>
-      </ul>
-
-      <ul class="mobile-menu__socials">
-        <li class="mobile-menu__pad">
-          <a href="instagram.com" class="mobile-menu__social-link">Instagram</a>
-        </li>
-        <li class="mobile-menu__pad">
-          <a href="twitter.com" class="mobile-menu__social-link">Twitter</a>
-        </li>
-        <li class="mobile-menu__pad">
-          <a href="facebook.com" class="mobile-menu__social-link">Facebook</a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/" class="mobile-menu__social-link"
-            >LinkedIn</a
-          >
-        </li>
-      </ul>
-    </div>
 
     <script src="./js/menu.js"></script>
     <script src="./js/modal.js"></script>
