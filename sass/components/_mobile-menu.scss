@@ -60,6 +60,7 @@
 }
 
 .mobile-menu {
+    z-index: 1;
 
     &__link {
         color: var(--color-main);

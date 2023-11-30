@@ -62,6 +62,67 @@
             </a>
           </li>
         </ul>
+
+        <div class="menu" id="hamburger-icon" onclick="toggleMobileMenu(this)">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+          <ul class="mobile-menu">
+            <ul class="mobile-menu__nav">
+              <li>
+                <a href="./index.html" class="mobile-menu__link">Студія</a>
+              </li>
+              <li>
+                <a
+                  href="./portfolio.html"
+                  class="mobile-menu__link mobile-menu__current"
+                  >Портфоліо</a
+                >
+              </li>
+              <li><a href="#" class="mobile-menu__link">Контакти</a></li>
+            </ul>
+
+            <ul class="mobile-menu__contacts">
+              <li class="mobile-menu__mrg">
+                <a href="tel:+380961111111" class="mobile-menu__contact-tel"
+                  >+38 096 111 11 11</a
+                >
+              </li>
+              <li>
+                <a
+                  href="mailto:info@devstudio.com"
+                  class="mobile-menu__contact-mail"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+
+            <ul class="mobile-menu__socials">
+              <li class="mobile-menu__pad">
+                <a href="instagram.com" class="mobile-menu__social-link"
+                  >Instagram</a
+                >
+              </li>
+              <li class="mobile-menu__pad">
+                <a href="twitter.com" class="mobile-menu__social-link"
+                  >Twitter</a
+                >
+              </li>
+              <li class="mobile-menu__pad">
+                <a href="facebook.com" class="mobile-menu__social-link"
+                  >Facebook</a
+                >
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/"
+                  class="mobile-menu__social-link"
+                  >LinkedIn</a
+                >
+              </li>
+            </ul>
+          </ul>
+        </div>
       </div>
     </header>
 
@@ -112,7 +173,7 @@
                   <img
                     src="./images/portfolio/technokryak.jpg"
                     alt="Технокряк"
-                    width="370"
+                    width="450"
                   />
                 </div>
                 <div class="project">
@@ -136,7 +197,7 @@
                   <img
                     src="./images/portfolio/basketball.jpg"
                     alt="Постер New Orlean vs Golden Star"
-                    width="370"
+                    width="450"
                   />
                 </div>
                 <div class="project">
@@ -162,7 +223,7 @@
                   <img
                     src="./images/portfolio/seafood.jpg"
                     alt="Ресторан Seafood"
-                    width="370"
+                    width="450"
                   />
                 </div>
                 <div class="project">
@@ -186,7 +247,7 @@
                   <img
                     src="./images/portfolio/prime.jpg"
                     alt="Проєкт Prime"
-                    width="370"
+                    width="450"
                   />
                 </div>
                 <div class="project">
@@ -210,7 +271,7 @@
                   <img
                     src="./images/portfolio/boxes.jpg"
                     alt="Проєкт Boxes"
-                    width="370"
+                    width="450"
                   />
                 </div>
                 <div class="project">
@@ -234,7 +295,7 @@
                   <img
                     src="./images/portfolio/no-borders.jpg"
                     alt="Inspiration has no Borders"
-                    width="370"
+                    width="450"
                   />
                 </div>
                 <div class="project">
@@ -258,7 +319,7 @@
                   <img
                     src="./images/portfolio/limited-edition.jpg"
                     alt="Видання Limited Edition"
-                    width="370"
+                    width="450"
                   />
                 </div>
                 <div class="project">
@@ -282,7 +343,7 @@
                   <img
                     src="./images/portfolio/lab.jpg"
                     alt="Проєкт LAB"
-                    width="370"
+                    width="450"
                   />
                 </div>
                 <div class="project">
@@ -306,7 +367,7 @@
                   <img
                     src="./images/portfolio/business.jpg"
                     alt="Growing Business"
-                    width="370"
+                    width="450"
                   />
                 </div>
                 <div class="project">
@@ -405,13 +466,12 @@
             </li>
           </ul>
         </div>
-
         <div class="subscribe">
           <p class="subscribe__title">Підпишіться на розсилку</p>
           <form class="subscribe__form" name="subscribe">
             <input
               name="main-ftr__email"
-              class="input-email"
+              class="subscribe__input"
               type="email"
               id="footer_email"
               placeholder="E-mail"
@@ -428,5 +488,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/menu.js"></script>
   </body>
 </html>
