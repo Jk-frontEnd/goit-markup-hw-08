@@ -309,12 +309,23 @@
           <ul class="work-section__list">
             <li class="work-section__item">
               <div class="work-section__thumb">
-                <img
-                  class="work-section__img"
-                  src="./images/home/coding.jpg"
-                  alt="Кодування"
-                  width="370"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/home/desktop/coding_lg.jpg    1x,
+                      ./images/home/desktop/coding@2x_lg.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <img
+                    class="work-section__img"
+                    src="./images/home/coding.jpg"
+                    alt="Кодування"
+                    width="370"
+                  />
+                </picture>
+
                 <p class="work-section__label work-section__desktop">
                   Десктопні додатки
                 </p>
@@ -322,12 +333,23 @@
             </li>
             <li class="work-item">
               <div class="work-section__thumb">
-                <img
-                  class="work-section__img"
-                  src="./images/home/sync.jpg"
-                  alt="Синхронізація"
-                  width="370"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/home/desktop/sync_lg.jpg    1x,
+                      ./images/home/desktop/sync@2x_lg.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <img
+                    class="work-section__img"
+                    src="./images/home/sync.jpg"
+                    alt="Синхронізація"
+                    width="370"
+                  />
+                </picture>
+
                 <p class="work-section__label work-section__sync">
                   Мобільні додатки
                 </p>
@@ -335,12 +357,23 @@
             </li>
             <li class="work-item">
               <div class="work-section__thumb">
-                <img
-                  class="work-section__img"
-                  src="./images/home/color.jpg"
-                  alt="Кольорова схема"
-                  width="370"
-                />
+                <picture>
+                  <source
+                    media="(min-width: 1200px)"
+                    srcset="
+                      ./images/home/desktop/color_lg.jpg    1x,
+                      ./images/home/desktop/color@2x_lg.jpg 2x
+                    "
+                    type="image/jpg"
+                  />
+                  <img
+                    class="work-section__img"
+                    src="./images/home/color.jpg"
+                    alt="Кольорова схема"
+                    width="370"
+                  />
+                </picture>
+
                 <p class="work-section__label work-section__color">
                   Дизайнерські рішення
                 </p>
@@ -355,12 +388,44 @@
           <h2 class="team-section__title">Наша команда</h2>
           <ul class="team-section__list">
             <li class="team-section__items">
-              <img
-                class="team-section__img"
-                src="./images/home/igor.jpg"
-                alt="Ігор Дем'яненко"
-                width="270"
-              />
+              <picture>
+                <!--Desktop-->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/home/desktop/igor_lg.jpg    1x,
+                    ./images/home/desktop/igor@2x_lg.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+
+                <!--Tablet-->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/home/tablet/igor_md.jpg    1x,
+                    ./images/home/tablet/igor@2x_md.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+
+                <!--Mobile-->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/home/mobile/igor_sm.jpg    1x,
+                    ./images/home/mobile/igor@2x_sm.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="team-section__img"
+                  src="./images/home/igor.jpg"
+                  alt="Ігор Дем'яненко"
+                  width="450"
+                />
+              </picture>
+
               <div class="team-section__text">
                 <h2 class="team-section__subtitle">Ігор Дем'яненко</h2>
                 <p class="team-section__desc">Product Designer</p>
@@ -414,12 +479,44 @@
             </li>
 
             <li class="team-section__items">
-              <img
-                class="team-section__img"
-                src="./images/home/olga.jpg"
-                alt="Ольга Рєпіна"
-                width="270"
-              />
+              <picture>
+                <!--Desktop-->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/home/desktop/olga_lg.jpg    1x,
+                    ./images/home/desktop/olga@2x_lg.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+
+                <!--Tablet-->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/home/tablet/olga_md.jpg    1x,
+                    ./images/home/tablet/olga@2x_md.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+
+                <!--Mobile-->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/home/mobile/olga_sm.jpg    1x,
+                    ./images/home/mobile/olga@2x_sm.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="team-section__img"
+                  src="./images/home/mobile/olga_sm.jpg"
+                  alt="Ольга Рєпіна"
+                  width="450"
+                />
+              </picture>
+
               <div class="team-section__text">
                 <h2 class="team-section__subtitle">Ольга Рєпіна</h2>
                 <p class="team-section__desc">Frontend Developer</p>
@@ -474,12 +571,44 @@
             </li>
 
             <li class="team-section__items">
-              <img
-                class="team-section__img"
-                src="./images/home/mykola.jpg"
-                alt="Микола Тарасов"
-                width="270"
-              />
+              <picture>
+                <!--Desktop-->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/home/desktop/mykola_lg.jpg    1x,
+                    ./images/home/desktop/mykola@2x_lg.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+
+                <!--Tablet-->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/home/tablet/mykola_md.jpg    1x,
+                    ./images/home/tablet/mykola@2x_md.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+
+                <!--Mobile-->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/home/mobile/mykola_sm.jpg    1x,
+                    ./images/home/mobile/mykola@2x_sm.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="team-section__img"
+                  src="./images/home/mobile/mykola_sm.jpg"
+                  alt="Микола Тарасов"
+                  width="450"
+                />
+              </picture>
+
               <div class="team-section__text">
                 <h2 class="team-section__subtitle">Микола Тарасов</h2>
                 <p class="team-section__desc">Marketing</p>
@@ -533,12 +662,44 @@
             </li>
 
             <li class="team-section__items">
-              <img
-                class="team-section__img"
-                src="./images/home/michael.jpg"
-                alt="Михайло Єрмаков"
-                width="270"
-              />
+              <picture>
+                <!--Desktop-->
+                <source
+                  media="(min-width: 1200px)"
+                  srcset="
+                    ./images/home/desktop/michael_lg.jpg    1x,
+                    ./images/home/desktop/michael@2x_lg.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+
+                <!--Tablet-->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./images/home/tablet/michael_md.jpg    1x,
+                    ./images/home/tablet/michael@2x_md.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+
+                <!--Mobile-->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./images/home/mobile/michael_sm.jpg    1x,
+                    ./images/home/mobile/michael@2x_sm.jpg 2x
+                  "
+                  type="image/jpg"
+                />
+                <img
+                  class="team-section__img"
+                  src="./images/home/michael.jpg"
+                  alt="Михайло Єрмаков"
+                  width="450"
+                />
+              </picture>
+
               <div class="team-section__text">
                 <h2 class="team-section__subtitle">Михайло Єрмаков</h2>
                 <p class="team-section__desc">UI Designer</p>

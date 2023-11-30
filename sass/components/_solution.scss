@@ -2,7 +2,7 @@
     color: var(--color-additional);
     background-image: linear-gradient(rgba(47, 48, 58, 0.40),
             rgba(47, 48, 58, 0.40)),
-        url(../images/home/solution-bg.jpg);
+        url(../images/home/mobile/solution-section_sm.jpg);
     background-color: var(--color-add-background);
     background-position: center;
     padding-top: 118px;
@@ -10,17 +10,54 @@
     display: flex;
     justify-content: center;
     margin: auto;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: linear-gradient(rgba(47, 48, 58, 0.40),
+                        rgba(47, 48, 58, 0.40)),
+                    url(../images/home/mobile/solution-section@2x_sm.jpg);
+    }
 
     @media screen and (min-width: 768px) and (max-width: 1199px) {
         padding-top: 200px;
         padding-bottom: 200px;
+
+        background-image: linear-gradient(rgba(47, 48, 58, 0.40),
+                    rgba(47, 48, 58, 0.40)),
+                url(../images/home/tablet/solution-bg_md.jpg);
+
+            @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: linear-gradient(rgba(47, 48, 58, 0.40),
+                            rgba(47, 48, 58, 0.40)),
+                        url(../images/home/tablet/solution-bg@2_md.jpg);
+            }
     }
     
     @media screen and (min-width: 1200px) {
         padding-top: 200px;
         padding-bottom: 200px;  
         max-width: 1600px;
+
+        background-image: linear-gradient(rgba(47, 48, 58, 0.40),
+                    rgba(47, 48, 58, 0.40)),
+                url(../images/home/desktop/solution-bg_lg.jpg);
+
+
+            @media (min-device-pixel-ratio: 2),
+                (min-resolution: 192dpi),
+                (min-resolution: 2dppx) {
+                    background-image: linear-gradient(rgba(47, 48, 58, 0.40),
+                            rgba(47, 48, 58, 0.40)),
+                        url(../images/home/desktop/solution-bg@2x_lg.jpg);
+            }
     }
+
+    
 
 
     
