@@ -17,5 +17,6 @@
     "> 1%",
     "last 2 versions"
   ],
-  "editor.fontSize": 14
+  "editor.fontSize": 14,
+  "editor.accessibilityPageSize": 14
 }

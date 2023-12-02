@@ -1,6 +1,5 @@
 footer {
     padding-left: 0;
-    padding-bottom: 60px;
     background-color: var(--color-add-background);
     padding: 60px 0px;
     margin: 0px;
@@ -29,10 +28,15 @@ footer {
 .main-ftr {
     margin-bottom: 60px;
 
-    
-        @media screen and (min-width: 1200px) {
-            margin-left: 94px;
-        }
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin-right: 165px;
+    }
+
+
+    @media screen and (min-width: 1200px) {
+        //margin-left: 94px;//
+        margin-bottom: 0;
+    }
 
     &__address {
         margin-left: 40px;
@@ -85,10 +89,9 @@ footer {
 .subscribe {
     margin: 0;
     padding: 0;
-    margin-top: 60px;
 
     @media screen and (min-width: 1200px) {
-        margin-left: auto;    
+        //margin-right: auto;//
     }
 
     &__form {
@@ -110,9 +113,13 @@ footer {
         border: 1px solid rgba(255, 255, 255, 0.30);
         background: rgba(33, 150, 243, 0.00);
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-        width: 450px;
+        max-width: 450px;
         height: 50px;
-        padding: 15px 16px;
+        width: 100%;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        padding-left: 16px;
+        margin: 0;
 
         color: var(--color-button);
         font-size: 16px;
@@ -125,6 +132,9 @@ footer {
         transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            width: 450px;
+        }
 
         @media screen and (min-width: 1200px) {
             width: 358px;
@@ -213,13 +223,18 @@ footer {
 }
 
 .join-container {
+    margin: 0;
+    margin-bottom: 60px;
 
     @media screen and (min-width: 768px) and (max-width: 1199px) {
+        margin: 0;
         margin-left: 94px;    
     }
 
     @media screen and (min-width: 1200px) {
+        margin: 0;
         margin-left: 70px;
+        margin-right: 93px;
     }
 
     &__title {

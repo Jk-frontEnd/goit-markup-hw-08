@@ -31,14 +31,30 @@
             <span class="logo__studio">Studio</span>
           </a>
 
+          <button
+            type="button"
+            class="menu__toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg
+              class="menu__icon"
+              width="40"
+              height="40"
+              aria-label="перемикач мобільного меню"
+            >
+              <use class="icon-menu" href="./images/sprite.svg#menu"></use>
+            </svg>
+          </button>
+
           <ul class="page-header__nav">
             <li>
-              <a class="page-header__link" href="./index.html">Студія</a>
+              <a class="page-header__link current" href="./index.html"
+                >Студія</a
+              >
             </li>
             <li>
-              <a class="page-header__link current" href="./portfolio.html"
-                >Портфоліо</a
-              >
+              <a class="page-header__link" href="./portfolio.html">Портфоліо</a>
             </li>
             <li>
               <a class="page-header__link" href="#">Контакти</a>
@@ -67,66 +83,87 @@
           </li>
         </ul>
 
-        <div class="menu" id="hamburger-icon" onclick="toggleMobileMenu(this)">
-          <div class="bar1"></div>
-          <div class="bar2"></div>
-          <div class="bar3"></div>
+        <div class="menu__container js-menu-container" id="mobile-menu">
+          <button type="submit" class="menu__toggle js-close-menu">
+            <svg class="menu__icon" width="40" height="40">
+              <use
+                class="close-menu"
+                href="./images/sprite.svg#close-menu"
+              ></use>
+            </svg>
+          </button>
           <ul class="mobile-menu">
-            <ul class="mobile-menu__nav">
-              <li>
-                <a
-                  href="./index.html"
-                  class="mobile-menu__link mobile-menu__current"
-                  >Студія</a
-                >
-              </li>
-              <li>
-                <a href="./portfolio.html" class="mobile-menu__link"
-                  >Портфоліо</a
-                >
-              </li>
-              <li><a href="#" class="mobile-menu__link">Контакти</a></li>
-            </ul>
+            <li class="mobile-menu__item">
+              <a
+                href="./index.html"
+                class="mobile-menu__link mobile-menu__current"
+                >Студія</a
+              >
+            </li>
+            <li class="mobile-menu__item">
+              <a href="./portfolio.html" class="mobile-menu__link">Портфоліо</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a href="#" class="mobile-menu__link">Контакти</a>
+            </li>
+          </ul>
 
-            <ul class="mobile-menu__contacts">
-              <li class="mobile-menu__mrg">
-                <a href="tel:+380961111111" class="mobile-menu__contact-tel"
-                  >+38 096 111 11 11</a
-                >
-              </li>
-              <li>
-                <a
-                  href="mailto:info@devstudio.com"
-                  class="mobile-menu__contact-mail"
-                  >info@devstudio.com</a
-                >
-              </li>
-            </ul>
-
-            <ul class="mobile-menu__socials">
-              <li class="mobile-menu__pad">
-                <a href="instagram.com" class="mobile-menu__social-link"
-                  >Instagram</a
-                >
-              </li>
-              <li class="mobile-menu__pad">
-                <a href="twitter.com" class="mobile-menu__social-link"
-                  >Twitter</a
-                >
-              </li>
-              <li class="mobile-menu__pad">
-                <a href="facebook.com" class="mobile-menu__social-link"
-                  >Facebook</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/"
-                  class="mobile-menu__social-link"
-                  >LinkedIn</a
-                >
-              </li>
-            </ul>
+          <ul class="mobile-contacts">
+            <li class="mobile-contacts__item">
+              <a href="tel:+380961111111" class="mobile-contacts__tel">
+                +38 096 111 11 11</a
+              >
+            </li>
+            <li class="mobile-contacts__item">
+              <a
+                href="mailto:info@devstudio.com"
+                class="mobile-contacts__email"
+              >
+                info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="mobile-socials">
+            <li class="mobile-socials__item">
+              <a
+                class="mobile-socials__link"
+                href="https://www.instagram.com"
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="instagram іконка"
+                >Instagram
+              </a>
+            </li>
+            <li class="mobile-socials__item">
+              <a
+                class="mobile-socials__link"
+                href="https://www.twitter.com"
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="twitter іконка"
+                >Twitter
+              </a>
+            </li>
+            <li class="mobile-socials__item">
+              <a
+                class="mobile-socials__link"
+                href="https://www.facebook.com"
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="facebook іконка"
+                >Facebook
+              </a>
+            </li>
+            <li class="mobile-socials__item">
+              <a
+                class="mobile-socials__link"
+                href="https://www.linkedin.com"
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="linkedin іконка"
+                >Linkedin
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -403,8 +440,8 @@
                 <source
                   media="(min-width: 768px)"
                   srcset="
-                    ./images/home/tablet/igor_md.jpg    1x,
-                    ./images/home/tablet/igor@2x_md.jpg 2x
+                    ./images/home/tablet/igor_md.jpg   1x,
+                    ./images/home/tablet/igor@2_md.jpg 2x
                   "
                   type="image/jpg"
                 />
@@ -494,8 +531,8 @@
                 <source
                   media="(min-width: 768px)"
                   srcset="
-                    ./images/home/tablet/olga_md.jpg    1x,
-                    ./images/home/tablet/olga@2x_md.jpg 2x
+                    ./images/home/tablet/olga_md.jpg   1x,
+                    ./images/home/tablet/olga@2_md.jpg 2x
                   "
                   type="image/jpg"
                 />
@@ -586,8 +623,8 @@
                 <source
                   media="(min-width: 768px)"
                   srcset="
-                    ./images/home/tablet/mykola_md.jpg    1x,
-                    ./images/home/tablet/mykola@2x_md.jpg 2x
+                    ./images/home/tablet/mykola_md.jpg   1x,
+                    ./images/home/tablet/mykola@2_md.jpg 2x
                   "
                   type="image/jpg"
                 />
@@ -677,8 +714,8 @@
                 <source
                   media="(min-width: 768px)"
                   srcset="
-                    ./images/home/tablet/michael_md.jpg    1x,
-                    ./images/home/tablet/michael@2x_md.jpg 2x
+                    ./images/home/tablet/michael_md.jpg   1x,
+                    ./images/home/tablet/michael@2_md.jpg 2x
                   "
                   type="image/jpg"
                 />
