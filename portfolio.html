@@ -27,6 +27,22 @@
             <span class="logo__studio">Studio</span>
           </a>
 
+          <button
+            type="button"
+            class="menu__toggle js-open-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg
+              class="menu__icon"
+              width="40"
+              height="40"
+              aria-label="перемикач мобільного меню"
+            >
+              <use class="icon-menu" href="./images/sprite.svg#menu"></use>
+            </svg>
+          </button>
+
           <ul class="page-header__nav">
             <li>
               <a class="page-header__link" href="./index.html">Студія</a>
@@ -63,64 +79,87 @@
           </li>
         </ul>
 
-        <div class="menu" id="hamburger-icon" onclick="toggleMobileMenu(this)">
-          <div class="bar1"></div>
-          <div class="bar2"></div>
-          <div class="bar3"></div>
+        <div class="menu__container js-menu-container" id="mobile-menu">
+          <button type="submit" class="menu__toggle js-close-menu">
+            <svg class="menu__icon" width="40" height="40">
+              <use
+                class="close-menu"
+                href="./images/sprite.svg#close-menu"
+              ></use>
+            </svg>
+          </button>
           <ul class="mobile-menu">
-            <ul class="mobile-menu__nav">
-              <li>
-                <a href="./index.html" class="mobile-menu__link">Студія</a>
-              </li>
-              <li>
-                <a
-                  href="./portfolio.html"
-                  class="mobile-menu__link mobile-menu__current"
-                  >Портфоліо</a
-                >
-              </li>
-              <li><a href="#" class="mobile-menu__link">Контакти</a></li>
-            </ul>
+            <li class="mobile-menu__item">
+              <a href="./index.html" class="mobile-menu__link">Студія</a>
+            </li>
+            <li class="mobile-menu__item">
+              <a
+                href="./portfolio.html"
+                class="mobile-menu__link mobile-menu__current"
+                >Портфоліо</a
+              >
+            </li>
+            <li class="mobile-menu__item">
+              <a href="#" class="mobile-menu__link">Контакти</a>
+            </li>
+          </ul>
 
-            <ul class="mobile-menu__contacts">
-              <li class="mobile-menu__mrg">
-                <a href="tel:+380961111111" class="mobile-menu__contact-tel"
-                  >+38 096 111 11 11</a
-                >
-              </li>
-              <li>
-                <a
-                  href="mailto:info@devstudio.com"
-                  class="mobile-menu__contact-mail"
-                  >info@devstudio.com</a
-                >
-              </li>
-            </ul>
-
-            <ul class="mobile-menu__socials">
-              <li class="mobile-menu__pad">
-                <a href="instagram.com" class="mobile-menu__social-link"
-                  >Instagram</a
-                >
-              </li>
-              <li class="mobile-menu__pad">
-                <a href="twitter.com" class="mobile-menu__social-link"
-                  >Twitter</a
-                >
-              </li>
-              <li class="mobile-menu__pad">
-                <a href="facebook.com" class="mobile-menu__social-link"
-                  >Facebook</a
-                >
-              </li>
-              <li>
-                <a
-                  href="https://www.linkedin.com/"
-                  class="mobile-menu__social-link"
-                  >LinkedIn</a
-                >
-              </li>
-            </ul>
+          <ul class="mobile-contacts">
+            <li class="mobile-contacts__item">
+              <a href="tel:+380961111111" class="mobile-contacts__tel">
+                +38 096 111 11 11</a
+              >
+            </li>
+            <li class="mobile-contacts__item">
+              <a
+                href="mailto:info@devstudio.com"
+                class="mobile-contacts__email"
+              >
+                info@devstudio.com</a
+              >
+            </li>
+          </ul>
+          <ul class="mobile-socials">
+            <li class="mobile-socials__item">
+              <a
+                class="mobile-socials__link"
+                href="https://www.instagram.com"
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="instagram іконка"
+                >Instagram
+              </a>
+            </li>
+            <li class="mobile-socials__item">
+              <a
+                class="mobile-socials__link"
+                href="https://www.twitter.com"
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="twitter іконка"
+                >Twitter
+              </a>
+            </li>
+            <li class="mobile-socials__item">
+              <a
+                class="mobile-socials__link"
+                href="https://www.facebook.com"
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="facebook іконка"
+                >Facebook
+              </a>
+            </li>
+            <li class="mobile-socials__item">
+              <a
+                class="mobile-socials__link"
+                href="https://www.linkedin.com"
+                target="_blank"
+                rel="noreferrer noopener"
+                aria-label="linkedin іконка"
+                >Linkedin
+              </a>
+            </li>
           </ul>
         </div>
       </div>
@@ -284,11 +323,6 @@
                       numquam, eveniet amet tempora accusamus incidunt repellat?
                     </p>
                   </div>
-                  <img
-                    src="./images/portfolio/seafood.jpg"
-                    alt="Ресторан Seafood"
-                    width="450"
-                  />
                   <picture>
                     <!--Desktop-->
                     <source
@@ -345,11 +379,42 @@
                       numquam, eveniet amet tempora accusamus incidunt repellat?
                     </p>
                   </div>
-                  <img
-                    src="./images/portfolio/prime.jpg"
-                    alt="Проєкт Prime"
-                    width="450"
-                  />
+                  <picture>
+                    <!--Desktop-->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/desktop/prime_lg.jpg    1x,
+                        ./images/portfolio/desktop/prime@2x_lg.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <!--Tablet-->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/tablet/prime_md.jpg    1x,
+                        ./images/portfolio/tablet/prime@2x_md.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <!--Mobile-->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/mobile/prime_sm.jpg    1x,
+                        ./images/portfolio/mobile/prime@2x_sm.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/portfolio/mobile/prime_sm.jpg"
+                      alt="Проєкт Prime"
+                      width="450"
+                    />
+                  </picture>
                 </div>
                 <div class="project">
                   <h2 class="project__name">Проєкт Prime</h2>
@@ -369,11 +434,42 @@
                       numquam, eveniet amet tempora accusamus incidunt repellat?
                     </p>
                   </div>
-                  <img
-                    src="./images/portfolio/boxes.jpg"
-                    alt="Проєкт Boxes"
-                    width="450"
-                  />
+                  <picture>
+                    <!--Desktop-->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/desktop/boxes_lg.jpg    1x,
+                        ./images/portfolio/desktop/boxes@2x_lg.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <!--Tablet-->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/tablet/boxes_md.jpg    1x,
+                        ./images/portfolio/tablet/boxes@2x_md.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <!--Mobile-->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/mobile/boxes_sm.jpg    1x,
+                        ./images/portfolio/mobile/boxes@2x_sm.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/portfolio/mobile/boxes_sm.jpg"
+                      alt="Проєкт Boxes"
+                      width="450"
+                    />
+                  </picture>
                 </div>
                 <div class="project">
                   <h2 class="project__name">Проєкт Boxes</h2>
@@ -393,11 +489,42 @@
                       numquam, eveniet amet tempora accusamus incidunt repellat?
                     </p>
                   </div>
-                  <img
-                    src="./images/portfolio/no-borders.jpg"
-                    alt="Inspiration has no Borders"
-                    width="450"
-                  />
+                  <picture>
+                    <!--Desktop-->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/desktop/no-border_lg.jpg    1x,
+                        ./images/portfolio/desktop/no-border@2x_lg.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <!--Tablet-->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/tablet/no-borders_md.jpg    1x,
+                        ./images/portfolio/tablet/no-borders@2x_md.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <!--Mobile-->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/mobile/no-borders_sm.jpg    1x,
+                        ./images/portfolio/mobile/no-borders@2x_sm.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/portfolio/mobile/no-borders_sm.jpg"
+                      alt="Inspiration has no Borders"
+                      width="450"
+                    />
+                  </picture>
                 </div>
                 <div class="project">
                   <h2 class="project__name">Inspiration has no Borders</h2>
@@ -417,11 +544,42 @@
                       numquam, eveniet amet tempora accusamus incidunt repellat?
                     </p>
                   </div>
-                  <img
-                    src="./images/portfolio/limited-edition.jpg"
-                    alt="Видання Limited Edition"
-                    width="450"
-                  />
+                  <picture>
+                    <!--Desktop-->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/desktop/limited-edition_lg.jpg    1x,
+                        ./images/portfolio/desktop/limited-edition@2x_lg.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <!--Tablet-->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/tablet/limited-edition_md.jpg    1x,
+                        ./images/portfolio/tablet/limited-edition@2x_md.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <!--Mobile-->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/mobile/limited-edition_sm.jpg    1x,
+                        ./images/portfolio/mobile/limited-edition@2x_sm.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/portfolio/mobile/limited-edition_sm.jpg"
+                      alt="Видання Limited Edition"
+                      width="450"
+                    />
+                  </picture>
                 </div>
                 <div class="project">
                   <h2 class="project__name">Видання Limited Edition</h2>
@@ -441,11 +599,42 @@
                       numquam, eveniet amet tempora accusamus incidunt repellat?
                     </p>
                   </div>
-                  <img
-                    src="./images/portfolio/lab.jpg"
-                    alt="Проєкт LAB"
-                    width="450"
-                  />
+                  <picture>
+                    <!--Desktop-->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/desktop/lab_lg.jpg    1x,
+                        ./images/portfolio/desktop/lab@2x_lg.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <!--Tablet-->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/tablet/lab_md.jpg    1x,
+                        ./images/portfolio/tablet/lab@2x_md.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <!--Mobile-->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/mobile/lab_sm.jpg    1x,
+                        ./images/portfolio/mobile/lab@2x_sm.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/portfolio/mobile/lab_sm.jpg"
+                      alt="Проєкт LAB"
+                      width="450"
+                    />
+                  </picture>
                 </div>
                 <div class="project">
                   <h2 class="project__name">Проєкт LAB</h2>
@@ -465,11 +654,42 @@
                       numquam, eveniet amet tempora accusamus incidunt repellat?
                     </p>
                   </div>
-                  <img
-                    src="./images/portfolio/business.jpg"
-                    alt="Growing Business"
-                    width="450"
-                  />
+                  <picture>
+                    <!--Desktop-->
+                    <source
+                      media="(min-width: 1200px)"
+                      srcset="
+                        ./images/portfolio/desktop/business_lg.jpg    1x,
+                        ./images/portfolio/desktop/business@2x_lg.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <!--Tablet-->
+                    <source
+                      media="(min-width: 768px)"
+                      srcset="
+                        ./images/portfolio/tablet/business_md.jpg    1x,
+                        ./images/portfolio/tablet/business@2x_md.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+
+                    <!--Mobile-->
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        ./images/portfolio/mobile/business_sm.jpg    1x,
+                        ./images/portfolio/mobile/business@2x_sm.jpg 2x
+                      "
+                      type="image/jpg"
+                    />
+                    <img
+                      src="./images/portfolio/mobile/business_sm.jpg"
+                      alt="Growing Business"
+                      width="450"
+                    />
+                  </picture>
                 </div>
                 <div class="project">
                   <h2 class="project__name">Growing Business</h2>
