@@ -1429,12 +1429,14 @@ input {
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .project-section__item {
     width: 354px;
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 1200px) {
   .project-section__item {
     margin-bottom: 0;
     width: 370px;
+    margin-bottom: 0;
   }
 }
 
