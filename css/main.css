@@ -1854,7 +1854,7 @@ footer {
   height: 100vh;
   padding: 48px 40px;
   background-color: var(--color-additional);
-  z-index: 999;
+  z-index: 1;
   overflow-y: scroll;
   -webkit-transform: translateY(-100%);
           transform: translateY(-100%);
