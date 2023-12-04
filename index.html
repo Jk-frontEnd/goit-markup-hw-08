@@ -43,7 +43,7 @@
               height="40"
               aria-label="перемикач мобільного меню"
             >
-              <use class="icon-menu" href="./images/sprite.svg#menu"></use>
+              <use class="icon-menu" href="./sprite.svg#menu"></use>
             </svg>
           </button>
 
@@ -83,95 +83,58 @@
           </li>
         </ul>
 
-        <div class="menu__container js-menu-container" id="mobile-menu">
-          <button type="submit" class="menu__toggle js-close-menu">
-            <svg class="menu__icon" width="40" height="40">
-              <use
-                class="close-menu"
-                href="./images/sprite.svg#close-menu"
-              ></use>
+        <div class="js-menu-container menu" id="mobile-menu">
+          <button
+            type="button"
+            class="menu__close js-close-menu"
+            aria-expanded="false"
+            aria-controls="mobile-menu"
+          >
+            <svg
+              class="menu__close-icon"
+              width="40"
+              height="40"
+              aria-label="перемикач мобільного меню"
+            >
+              <use class="icon-close-menu" href="./sprite.svg#close-menu"></use>
             </svg>
           </button>
-          <ul class="mobile-menu">
-            <li class="mobile-menu__item">
-              <a
-                href="./index.html"
-                class="mobile-menu__link mobile-menu__current"
-                >Студія</a
-              >
+          <ul class="menu__nav">
+            <li>
+              <a class="menu__link menu__current" href="./index.html">Студія</a>
             </li>
-            <li class="mobile-menu__item">
-              <a href="./portfolio.html" class="mobile-menu__link">Портфоліо</a>
+            <li>
+              <a class="menu__link" href="./portfolio.html">Портфоліо</a>
             </li>
-            <li class="mobile-menu__item">
-              <a href="#" class="mobile-menu__link">Контакти</a>
+            <li>
+              <a class="menu__link" href="#">Контакти</a>
             </li>
           </ul>
 
-          <ul class="mobile-contacts">
-            <li class="mobile-contacts__item">
-              <a href="tel:+380961111111" class="mobile-contacts__tel">
-                +38 096 111 11 11</a
-              >
+          <ul class="menu__contacts">
+            <li>
+              <a class="menu__tel" href="tel:+380961111111">
+                +380 96 111 1111
+              </a>
             </li>
-            <li class="mobile-contacts__item">
-              <a
-                href="mailto:info@devstudio.com"
-                class="mobile-contacts__email"
-              >
-                info@devstudio.com</a
-              >
+            <li>
+              <a class="menu__email" href="mailto:info@devstudio.com">
+                info@devstudio.com
+              </a>
             </li>
           </ul>
-          <ul class="mobile-socials">
-            <li class="mobile-socials__item">
-              <a
-                class="mobile-socials__link"
-                href="https://www.instagram.com"
-                target="_blank"
-                rel="noreferrer noopener"
-                aria-label="instagram іконка"
-                >Instagram
-              </a>
-            </li>
-            <li class="mobile-socials__item">
-              <a
-                class="mobile-socials__link"
-                href="https://www.twitter.com"
-                target="_blank"
-                rel="noreferrer noopener"
-                aria-label="twitter іконка"
-                >Twitter
-              </a>
-            </li>
-            <li class="mobile-socials__item">
-              <a
-                class="mobile-socials__link"
-                href="https://www.facebook.com"
-                target="_blank"
-                rel="noreferrer noopener"
-                aria-label="facebook іконка"
-                >Facebook
-              </a>
-            </li>
-            <li class="mobile-socials__item">
-              <a
-                class="mobile-socials__link"
-                href="https://www.linkedin.com"
-                target="_blank"
-                rel="noreferrer noopener"
-                aria-label="linkedin іконка"
-                >Linkedin
-              </a>
-            </li>
+
+          <ul class="menu__socials">
+            <li><a href="" class="menu__social-item">Instagram</a></li>
+            <li><a href="" class="menu__social-item">Twitter</a></li>
+            <li><a href="" class="menu__social-item">Facebook</a></li>
+            <li><a href="" class="menu__social-item">LinkedIn</a></li>
           </ul>
         </div>
       </div>
     </header>
 
     <main>
-      <!---tuto-->
-
       <section class="solution-section">
         <div class="container">
           <h1 class="solution-section__title">

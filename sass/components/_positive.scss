@@ -21,7 +21,6 @@
             flex-direction: row;
             flex-wrap: wrap;
             gap: 30px;
-            align-items: first baseline;
         }
     
         // Styles for desktop screens (min-width: 1200px)
@@ -61,12 +60,12 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        min-width: 290px;
-        padding: 25px 82px;
+        padding: 25px 110px;
 
         //mobile 480px
-        @media screen and (min-width: 390px) and (max-width: 767px) {
+        @media screen and (min-width: 480px) and (max-width: 767px) {
             padding: 25px 190px;
+            justify-content: center;
         }
 
         //tablet

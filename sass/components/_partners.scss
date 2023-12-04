@@ -1,7 +1,13 @@
 .partners-section {
-    padding-top: 94px;
-    padding-bottom: 94px;
-    padding-left: 0;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    //desktop
+    @media screen and (min-width: 1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+        padding-left: 0;
+    }
 
     &__title {
         text-align: center;
