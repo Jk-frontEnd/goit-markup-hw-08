@@ -1,8 +1,15 @@
 .team-section {
     background-color: var(--color-button);
     background-size: 100%;
-    padding-bottom: 94px;
-    padding-top: 94px;
+    
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    //desktop
+    @media screen and (min-width: 1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
 
     &__text {
         padding-bottom: 30px;

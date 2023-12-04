@@ -1,6 +1,12 @@
 .positive-section {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    //desktop
+    @media screen and (min-width: 1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
     
 
     &__list {
@@ -38,11 +44,13 @@
         //tablet
         @media screen and (min-width: 768px) {
             max-width: 354px;
+            margin: 0;
         }
     
         //desktop
         @media screen and (min-width: 1200px) {
             max-width: 270px;
+            margin: 0;
         }
     }
 
@@ -54,7 +62,7 @@
         align-items: center;
         justify-content: center;
         min-width: 290px;
-        padding: 25px calc((190px - 25px) / 2);
+        padding: 25px 82px;
 
         //mobile 480px
         @media screen and (min-width: 390px) and (max-width: 767px) {
@@ -68,7 +76,8 @@
 
         //desktop
         @media screen and (min-width: 1200px) {
-            padding: 25px 100px;        
+            padding: 25px 100px; 
+            min-width: 270px;       
         }
     }
 
