@@ -1863,13 +1863,18 @@ footer {
   margin: 0;
   background-color: transparent;
   border: none;
-  margin-left: 170px;
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .icon-menu:hover,
 .menu__toggle:hover {
   fill: var(--color-web);
+}
+@media screen and (min-width: 480px) {
+  .icon-menu,
+  .menu__toggle {
+    margin-left: 170px;
+  }
 }
 @media screen and (min-width: 768px) {
   .icon-menu,
@@ -1908,6 +1913,9 @@ footer {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
 }
 @media screen and (min-width: 768px) {
   .menu {
@@ -1932,7 +1940,7 @@ footer {
 }
 .menu__link {
   color: var(--color-main);
-  font-size: 40px;
+  font-size: 32px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -1943,6 +1951,11 @@ footer {
 }
 .menu__link:hover {
   color: var(--color-web);
+}
+@media screen and (min-width: 480px) {
+  .menu__link {
+    font-size: 40px;
+  }
 }
 .menu__current {
   color: var(--color-web);
@@ -1956,15 +1969,21 @@ footer {
 .menu__tel {
   color: var(--color-web);
   text-decoration: none;
-  font-size: 34px;
+  font-size: 26px;
   font-weight: 500;
   letter-spacing: 0.68px;
-  margin-bottom: 32px;
+  margin-bottom: 26px;
+}
+@media screen and (min-width: 480px) {
+  .menu__tel {
+    font-size: 34px;
+    margin-bottom: 32px;
+  }
 }
 .menu__email {
   color: var(--color-desc);
   text-decoration: none;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 500;
   letter-spacing: 0.48px;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
@@ -1972,6 +1991,11 @@ footer {
 }
 .menu__email:hover {
   color: var(--color-web);
+}
+@media screen and (min-width: 480px) {
+  .menu__email {
+    font-size: 24px;
+  }
 }
 .menu__socials {
   display: -webkit-box;
@@ -1981,11 +2005,16 @@ footer {
 .menu__social-item {
   color: var(--color-web);
   text-decoration: none;
-  font-size: 18px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: 0.36px;
+}
+@media screen and (min-width: 480px) {
+  .menu__social-item {
+    font-size: 18px;
+  }
 }
 .menu__socials li:not(:last-child) {
   margin-right: 10px;
@@ -1993,10 +2022,12 @@ footer {
   border-right: 1px solid rgba(33, 33, 33, 0.2);
 }
 
-.menu .is-open {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: all;
+  -webkit-transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }/*# sourceMappingURL=main.css.map */
