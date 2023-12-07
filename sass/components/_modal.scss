@@ -10,11 +10,15 @@
 
 
     &__fill {
-        padding: 40px;
         color: var(--color-desc);
-        font-size: 12px;
+        padding: 15px;
+        font-size: 14px;         
         font-weight: 400;
         letter-spacing: 0.12px;
+
+        @media screen and (min-width: 480px) and (max-width: 767px){
+            padding: 40px;
+        }
     }
 
     &__close-btn {
@@ -30,11 +34,17 @@
         cursor: pointer;
         top: 8px;
         right: 8px;
-        left: 412px;
+        left: 270px;
     
         transition-property: fill;
         transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        @media screen and (min-width: 480px) and (max-width: 767px) {
+            top: 8px;
+            right: 8px;
+            left: 412px;        
+        }
 
         @media screen and (min-width: 768px) and (max-width: 1199px) {
             left: 490px;
@@ -53,26 +63,47 @@
 
     &__title {
         color: var(--color-main);
-        font-size: 20px;
         font-weight: 700;
         line-height: 1.5;
+        font-size: 16px;
         letter-spacing: 0.6px;
         margin-bottom: 12px;
+        width: 266px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @media screen and (min-width: 480px) and (max-width: 767px) {
+            font-size: 20px;
+            width: fit-content;
+        }
+    }
+
+    &__name {
+        font-size: 9px;
     }
 
     &__input {
         border-radius: 4px;
         border: 1px solid rgba(33, 33, 33, 0.20);
-        max-width: 370px;
+        max-width: 260px;
         max-height: 40px;
         padding: 0;
         margin: 0;
-        padding-left: 42px;
+        padding-left: 50px;
     
         transition-property: border;
         transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         
+        @media screen and (min-width: 480px) and (max-width: 767px) {
+            max-width: 370px;
+            max-height: 40px;
+            padding: 0;
+            margin: 0;
+            padding-left: 42px;        
+        }
+
         @media screen and (min-width: 768px) and (max-width: 1199px) {
             max-width: 448px;
             max-height: 40px;
@@ -99,19 +130,27 @@
     }
 
     &__comment {
-        height: 120px;
-        width: 370px;
+        height: 100px;
+        width: 260px;
         padding: 12px 16px;
         border-radius: 4px;
         border: 1px solid rgba(33, 33, 33, 0.20);
         resize: none;
         color: var(--color-main);
-        font-size: 14px;
+        font-size: 10px;
         margin: 0;
     
         transition-property: border;
         transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        @media screen and (min-width: 480px) and (max-width: 767px) {
+            height: 120px;
+            width: 370px;
+            padding: 12px 16px;
+            font-size: 14px;
+        }
+
 
         @media screen and (min-width: 768px) {
             width: 448px;
@@ -126,10 +165,8 @@
             }
     }
 
-    
-
     &__submit-btn {
-        font-size: 16px;
+        font-size: 10px;      
         font-style: normal;
         font-weight: 700;
         line-height: 1.9;
@@ -141,7 +178,7 @@
         border: none;
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 
-        padding: 10px 52px;
+        padding: 10px 32px;        
         display: flex;
         justify-content: center;
         align-items: center;
@@ -159,6 +196,11 @@
                 background-color: var(--color-active);
                 box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
             }
+
+            @media screen and (min-width: 480px) {
+                font-size: 16px;
+                padding: 10px 52px;
+            }
     }
 
     &__checkbox-label {
@@ -167,9 +209,13 @@
         justify-content: center;
         gap: 8px;
         margin: 0;
-        margin-bottom: 30px;
-        margin-top: 20px;
+        margin-bottom: 10px;
+        margin-top: 10px;
         padding: 0;
+
+        @media screen and (min-width: 480px) {
+            margin-bottom: 30px;
+        }
     }
 
     &__checkbox-custom {
@@ -178,8 +224,8 @@
         border-radius: 2px;
         padding: 0;
         margin: 0;
-        width: 16px;
-        height: 15px;
+        width: 14px;
+        height: 13px;
     
         display: flex;
         align-items: center;
@@ -206,17 +252,21 @@
 
     &__agree {
         font-family: var(--font-family-main);
-        font-size: 12px;
+        font-size: 9px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
         letter-spacing: 0.36px;
+
+        @media screen and (min-width: 480px) {
+            font-size: 12px;
+        }
     }
 
     &__policy-link {
         color: var(--color-web);
         font-family: var(--font-family-main);
-        font-size: 12px;
+        font-size: 9px;
         font-style: normal;
         font-weight: 400;
         line-height: 24px;
@@ -226,6 +276,10 @@
         transition-property: color;
         transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        
+            @media screen and (min-width: 480px) {
+                font-size: 12px;
+            }
     }
 
     &__label>&__img {
@@ -264,7 +318,11 @@
     margin-bottom: 4px;
     position: relative;
 
-    left: 18px;
+    left: 10px;
+
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+        left: 18px;
+    }
 
     @media screen and (min-width: 768px) and (max-width: 1199px) {
         left: 0;
@@ -330,12 +388,12 @@ input {
 
 .comment {
     &::placeholder {
-            color: rgba(117, 117, 117, 0.50);
-            font-family: var(--font-family-main);
-            font-size: 12px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
-            letter-spacing: 0.12px;
-        }
+        color: rgba(117, 117, 117, 0.50);
+        font-family: var(--font-family-main);
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.12px;
+    }
 }

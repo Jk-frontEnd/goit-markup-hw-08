@@ -37,6 +37,8 @@
                 margin-bottom: 50px;
             }
         }
+
+        
     
         &__button {
             background: var(--color-button);
@@ -69,11 +71,11 @@
         &__proj-list {
             margin: 0;
             padding: 0;
-             list-style: none;
-             display: flex;
-             flex-direction: column;
-             justify-content: center;
-             
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            display: flex;
              
             @media screen and (min-width: 768px) and (max-width: 1199px) {
                 flex-direction: row;
@@ -93,7 +95,6 @@
         }
     
         &__item {
-            width: 100%;
             max-width: 450px;
             margin-bottom: 30px;
 
@@ -127,8 +128,16 @@
         padding: 0;
     }
 
+    &__duckin {
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            height: 72px;
+        }
+    }
+
     &__ball {
-        max-width: 309px;
+        @media screen and (min-width: 768px) and (max-width: 1199px) {
+            max-width: 250px;
+        }    
     }
 
     &__type {
@@ -150,15 +159,19 @@
     &__card-text {
         color: var(--color-additional);
         font-family: var(--font-family-main);
-        font-size: 18px;
+        font-size: 14px;
         font-style: normal;
         font-weight: 400;
         line-height: 1.5;
+
+        @media screen and (min-width: 480px) {
+            font-size: 18px;
+        }
     }
 
     &__card {
         position: absolute;
-        padding: 63px 24px;
+        padding:  24px;
         background: rgba(33, 150, 243, 0.90);
         top: 0;
         left: 0;
@@ -169,7 +182,12 @@
         transition-property: inherit;
         transition-duration: 250ms;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+        @media screen and (min-width: 480px) {
+            padding: 63px 24px;
+        }
     }
+
 }
 
 .project-section__link:hover .overlay-box__card {
